@@ -1,0 +1,62 @@
+--------------------------------- ARQUIVOS IMPORTANTES REACT NATIVE ------------------------------------
+
+> .\App.tsx //--------------// Arquivo principal onde é executado o projeto
+
+--------------------------------- DIRETÓRIOS DO PROJETO E COMPONENTES ------------------------------------
+
+> .\assets\... //--------------// Diretório dos assets da aplicação, icones, imagens, etc.
+
+> .\src\... //--------------// Diretório criado manualmente para os códigos fonte do projeto
+
+    [@types] --> .\src\@types\... //--------------// Diretório das configurações das extensões de arquivos de imagem
+
+        .\src\@types\navigation.d.ts //--------------// Configuração dos tipos das rotas 
+        .\src\@types\png.d.ts //--------------// Configuração do tipo de imagem png
+    
+    [databases] --> .\src\databases\... //--------------// Diretório das configurações do banco de dados local
+
+        .\src\databases\index.ts //--------------// Arquivo de conexão com o banco de dados local
+
+        .\src\databases\models\... //--------------// Diretório das models
+
+        .\src\databases\schemes\... //--------------// Diretório dos schemas do banco de dados local, que são usados para criar as tabelas
+
+            .\src\databases\schemes\index.ts //--------------// Arquivo de configuração para criação do banco
+    
+    [routes] --> .\src\routes\... //--------------// Diretório criado manualmente para as rotas
+
+    [components] --> .\src\components\... //--------------// Diretório criado manualmente para os componentes 
+
+    [screens] --> .\src\screens\... //--------------// Diretório criado manualmente para as telas 
+
+    [services] --> .\src\services\... //--------------// Diretório criado manualmente dos serviços do projeto
+
+    [theme] --> .\src\theme\... //--------------// Diretório criado manualmente para configuração dos tokens de design do tema do aplicativo, como as fontes e cores padrões
+
+        .\src\theme\index.ts  //--------------//  Definição dos tokens de stilo
+        .\src\theme\syteld.d.tx //--------------// Configuração do tema
+
+    [assets] --> .\src\assets\... //--------------// Diretório criado manualmente dos assets específicos do projeto, icones, imagens, etc.
+
+--------------------------------- ARQUIVOS DE CONFIGURAÇÃO REACT NATIVE ------------------------------------
+
+> .\App.json //--------------// Configuração do projeto
+
+    expo = [...] //--------------// Componentes gereais do EXPO, icones, nome da label, OS de execução, etc
+    splash = [...], ios = [...], android = [...] //--------------// Demais configurações
+
+> .\babel.config.js //--------------// Configuração dos plugins
+
+--------------------------------------- CONFIGURAÇÃO DOS PACOTES NPM -----------------------------------------
+
+> .\package-lock.json //--------------// Configuração das dependencias do projeto
+
+> .\package.json //--------------// Configuração das dependencias do projeto
+
+> .\tsconfig.json //--------------// Configuração do typescript
+
+--------------------------------------- IMPORTANTE -----------------------------------------
+
+Adobe Color Wheel -> https://color.adobe.com/pt/create/color-wheel
+Usado para definição cromatica das cores e identificação de cores padrões a partir de uma imagem como um logo
+Utiliza as teorias de cores e regras de harmonias

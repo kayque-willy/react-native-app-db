@@ -1,0 +1,111 @@
+------------------------------------------CRIAÇÃO PROJETO-------------------------------------------------
+
+> $  expo init //--------------// Criação de um novo projeto React Native (Expo Go)
+
+> $  npx create-expo-app my-app //--------------// Criação de um novo projeto React Native, Bare Project, no qual, também inclui os códigos nativos dos OS
+
+------------------------------------------INSTALAÇÃO - [CLI]-----------------------------------------------
+
+> $  npm install -g expo-cli //--------------// Instalação do Expo Go , para depuração e execução remota 
+
+> $  npm install -g eas-cli //--------------// Instalação do EAS para compilação 
+
+---------------------------------INSTALAÇÃO - [STYLED COMPONENTES E TIPAGEM]--------------------------------
+
+> $  npm install --save styled-components //--------------// Instalação do styled-components para CSS
+
+> $  npm install --save @types/styled-components-react-native //--------------// Instalação da tipagem do styled-components para CSS
+
+> $  npm install --save @types/react //--------------// Instalação da tipagem do react, caso ocorra algum problema com o typescript
+
+> $  npm install --save react-native-responsive-fontsize //--------------// Instalação das fontes responsivas
+
+> $  npm install --save react-native-animatable //--------------// Instalação do pacote de animações 
+
+----------------------------------------INSTALAÇÃO - [QUERY API]------------------------------------------
+
+> $  npm install --save axios //--------------// Instalação do axios para gerenciar as requisições no consumo de APIs
+
+> $  npm install --save react-query //--------------// Instalação do react query para gerenciamento dos dados obtidos da API
+
+----------------------------------------INSTALAÇÃO - [HOOK FORM]------------------------------------------
+
+> $  npm install --save react-hook-form //--------------// Instalação do react hook form para gerenciamento e validações dos formulários
+
+----------------------------------------INSTALAÇÃO - [NAVEGAÇÃO]------------------------------------------
+
+> $  npm install --save @react-navigation/native //--------------// Instalação do react navigation para gerenciamento de rotas
+
+    [REACT-NAVIGATION - DEPENDENCIAS OBRIGATÓRIAS]
+
+    > $  npm install --save react-native-screens //--------------// Instalação das dependencias de complemento para a a react navigate
+
+    > $  npm install --save react-native-safe-area-context //--------------// Instalação das dependencias de complemento para a a react navigate
+
+    [TIPOS DE NAVEGAÇÃO]
+
+    [Stack] (Tela sobre tela)
+    > $  npm install @react-navigation/native-stack //--------------// Instalação das dependencias de complemento para a a react navigate
+
+    [Tab] (Menu inferior) 
+    > $  npm install @react-navigation/bottom-tabs //--------------// Instalação das dependencias de complemento para a a react navigate
+
+    [Draw] (Barra lateral)
+    > $  npm install @react-navigation/drawer //--------------// Instalação das dependencias de complemento para a a react navigate
+
+----------------------------------------INSTALAÇÃO - [BANCO DE DADOS - SQLITE]------------------------------------------
+
+> $ npm install @nozbe/watermelondb //--------------// Instalação do sgbd watermelondb para banco de dados local sqlite
+
+    [WATERMELONDB - DEPENDENCIAS OBRIGATÓRIAS]
+
+    > $ npm install -D @babel/plugin-proposal-decorators //--------------// Plugin da sintaxe dos Decorators do SGBD
+    
+        [OBRIGATÓRIO - BABEL] -> ./babel.config.js
+            plugins: ['@babel/plugin-proposal-decorators'], //--------------// Obrigatório a adição do plugin do reanimated no Babel.config
+
+---------------------------INSTALAÇÃO DE DEPENDENCIAS PARA CONFIGURAÇÕES NATIVAS--------------------------
+
+> $  expo install @expo-google-fonts/roboto  //--------------// Instalação da fonte Roboto
+
+> $  expo install expo-app-loading  //--------------// Instalação do app loading
+
+> $  expo install react-native-reanimated  //--------------// Instalação do reanimated, que gerencia as animações, obrigatório para o react-drawer
+     
+     [OBRIGATÓRIO - BABEL] -> ./babel.config.js
+        plugins: ['react-native-reanimated/plugin'], //--------------// Obrigatório a adição do plugin do reanimated no Babel.config
+
+     [OBRIGATÓRIO - GRADLE] -> ./android/build.gradle
+       kotlin_version = '1.5.20' 
+       kotlinVersion = '1.5.20'  //--------------// Obrigatório a adição da versão do kotlin no build.gradle
+
+> $  expo install react-native-gesture-handler  //--------------// Instalação do gestle handler, que gerencias os gestos, obrigatório para o react-drawer
+
+     [OBRIGATÓRIO - VIEW] -> ./App.tsx
+        Adição do <GestureHandlerRootView> na View //--------------// Obrigatório a adição do plugin do reanimated no Babel.config
+
+----------------------------------------------COMPILAÇÃO----------------------------------------------------
+
+> $ npx expo build:web //--------------// Exporta o projeto compilado para execução web
+
+> $ eas build --platform android //--------------// Exporta o projeto compilado para android
+
+> $ eas build --platform ios //--------------// Exporta o projeto compilado IOS
+
+----------------------------------------------EXECUÇÃO - EXPO----------------------------------------------------
+
+> $  expo start --clear //--------------// Executa o projeto com o Expo Go 
+
+> $  npx expo run:android --variant debug || release//--------------// Executa o projeto diretamente no dispositivo android, pelo emuladour ou USB
+
+> $  npx expo run:ios --variant debug || release //--------------// Executa o projeto diretamente no dispositivo IOS, pelo emuladour ou USB
+
+----------------------------------------------EXECUÇÃO - BARE WORKFLOW----------------------------------------------------
+
+(1) > $ npx react-native start //--------------// Inicia o metro bundle, é necessario executar em terminal separado 
+
+(2) > $ npx react-native run-android //--------------// Executa o projeto diretamente no dispositivo Android, pelo emuladour ou USB
+
+(2) > $ npx react-native run-ios //--------------// Executa o projeto diretamente no dispositivo IOS, pelo emuladour ou USB
+
+----------------------------------------------------------------------------------------------------------
